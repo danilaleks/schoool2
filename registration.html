@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Форма реєстрації</title>
+</head>
+<body>
+   <h1>Форма реєстрації</h1>
+   <form method="POST" action="{{ url_for('registration') }}">
+        {{ form.csrf_token }}
+        {{ form.username.label }}<br>
+        {{ form.username }}<br><br>
+        {{ form.email.label }}<br>
+        {{ form.email }}<br><br>
+        {{ form.password.label }}<br>
+        {{ form.password }}<br><br>
+        {{ form.confirm.label }}<br>
+        {{ form.confirm }}<br><br>
+        {{ form.age.label }}<br>
+        {{ form.age }}<br><br>
+        <input type="submit" value="Зареєструватися">
+    </form>
+</body>
+</html>
